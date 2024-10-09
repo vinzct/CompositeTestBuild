@@ -1,0 +1,55 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="WmMQAdapter" runtimeVersion="10.15.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="build.version" value="10.3.9" />
+  <buildInfo name="BuildVersion" value="10.3.9" />
+  <buildInfo name="BuildTimestamp" value="2024-10-09T14:10:42" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.15.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="Disallow Active Package Install">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="Package Execution Check">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types During Deployment">
+    <value>true</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>false</value>
+  </property>
+  <asset name="WmMQAdapter.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="WmMQAdapter.code.jars.com.ibm.mq.commonservices.jar" displayName="code/jars/com.ibm.mq.commonservices.jar">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmMQAdapter.code.jars.com.ibm.mq.headers.jar" displayName="code/jars/com.ibm.mq.headers.jar">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmMQAdapter.code.jars.com.ibm.mq.jar" displayName="code/jars/com.ibm.mq.jar">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmMQAdapter.code.jars.com.ibm.mq.jmqi.jar" displayName="code/jars/com.ibm.mq.jmqi.jar">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="WmMQAdapter.code.jars.com.ibm.mq.pcf.jar" displayName="code/jars/com.ibm.mq.pcf.jar">
+    <implementation.generic type="isfile" />
+  </asset>
+</asset_composite>

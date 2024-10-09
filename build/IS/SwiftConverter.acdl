@@ -1,0 +1,508 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="SwiftConverter" runtimeVersion="10.15.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="build.version" value="10.3.9" />
+  <buildInfo name="BuildVersion" value="10.3.9" />
+  <buildInfo name="BuildTimestamp" value="2024-10-09T14:10:41" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.15.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="Disallow Active Package Install">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="Package Execution Check">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types During Deployment">
+    <value>true</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>false</value>
+  </property>
+  <asset name="ISPackage.SwiftConverter" displayName="SwiftConverter">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="SwiftConverter.services.tn.convertMT103" displayName="SwiftConverter.services.tn:convertMT103">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:SwiftConverter.services.mapping.mt103ToPacs008</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.services.tn.sendPacs008" displayName="SwiftConverter.services.tn:sendPacs008">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="SwiftConverter.services.mapping.mt103ToPacs008" displayName="SwiftConverter.services.mapping:mt103ToPacs008">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:SwiftConverter.docs.mx.head_001_001_04.AppHdr</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_Document</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.head_001_001_04.AppHdr" displayName="SwiftConverter.docs.mx.head_001_001_04:AppHdr">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DocumentType1" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_DocumentType1">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DocumentType2Choice</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_TaxParty2" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_TaxParty2">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_TaxAuthorisation1</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_PersonIdentification18" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_PersonIdentification18">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DateAndPlaceOfBirth1</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_GenericPersonIdentification2</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_TaxParty1" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_TaxParty1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_FrequencyPeriod1" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_FrequencyPeriod1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_NameAndAddress18" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_NameAndAddress18">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_PostalAddress27</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_InstructionForCreditorAgent3" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_InstructionForCreditorAgent3">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DatePeriod2" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_DatePeriod2">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ClearingSystemIdentification3Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_ClearingSystemIdentification3Choice">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_AddressType3Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_AddressType3Choice">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_GenericIdentification30</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.document" displayName="SwiftConverter.docs.mx.pacs_008_001_12:document">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_Document</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_RemittanceLocationData2" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_RemittanceLocationData2">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_NameAndAddress18</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DocumentAdjustment1" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_DocumentAdjustment1">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ActiveOrHistoricCurrencyAndAmount</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_RemittanceAmount4" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_RemittanceAmount4">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DocumentAmount1</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DocumentAdjustment1</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_FinancialIdentificationSchemeName1Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_FinancialIdentificationSchemeName1Choice">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ProxyAccountIdentification1" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_ProxyAccountIdentification1">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ProxyAccountType1Choice</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_Purpose2Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_Purpose2Choice">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_StructuredRemittanceInformation18" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_StructuredRemittanceInformation18">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ReferredDocumentInformation8</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_RemittanceAmount4</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_CreditorReferenceInformation3</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_PartyIdentification272</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_TaxData1</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_Garnishment4</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_RemittanceLocation8" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_RemittanceLocation8">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_RemittanceLocationData2</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_GarnishmentType1Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_GarnishmentType1Choice">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ServiceLevel8Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_ServiceLevel8Choice">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_OrganisationIdentification39" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_OrganisationIdentification39">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_GenericOrganisationIdentification3</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_MandateClassification1Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_MandateClassification1Choice">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ActiveOrHistoricCurrencyAndAmount" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_ActiveOrHistoricCurrencyAndAmount">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ClearingSystemMemberIdentification2" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_ClearingSystemMemberIdentification2">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ClearingSystemIdentification2Choice</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_Contact13" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_Contact13">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_OtherContact1</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_RegulatoryReporting3" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_RegulatoryReporting3">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_RegulatoryAuthority2</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_StructuredRegulatoryReporting3</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_MandateSetupReason1Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_MandateSetupReason1Choice">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_InstructionForNextAgent1" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_InstructionForNextAgent1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_SupplementaryDataEnvelope1" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_SupplementaryDataEnvelope1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_SettlementTimeRequest2" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_SettlementTimeRequest2">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ClearingSystemIdentification2Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_ClearingSystemIdentification2Choice">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_TaxPeriod3" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_TaxPeriod3">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DatePeriod2</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_GenericIdentification30" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_GenericIdentification30">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_AccountIdentification4Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_AccountIdentification4Choice">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_GenericAccountIdentification1</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_PostalAddress27" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_PostalAddress27">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_AddressType3Choice</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_GarnishmentType1" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_GarnishmentType1">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_GarnishmentType1Choice</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_Document" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_Document">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_FIToFICustomerCreditTransferV12</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_GenericPersonIdentification2" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_GenericPersonIdentification2">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_PersonIdentificationSchemeName1Choice</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_SupplementaryData1" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_SupplementaryData1">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_SupplementaryDataEnvelope1</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_CashAccountType2Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_CashAccountType2Choice">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DocumentLineType1Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_DocumentLineType1Choice">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_AccountSchemeName1Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_AccountSchemeName1Choice">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_BranchData5" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_BranchData5">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_PostalAddress27</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_TaxData1" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_TaxData1">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_TaxParty1</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_TaxParty2</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ActiveOrHistoricCurrencyAndAmount</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_TaxRecord3</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_LocalInstrument2Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_LocalInstrument2Choice">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_OrganisationIdentificationSchemeName1Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_OrganisationIdentificationSchemeName1Choice">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_Garnishment4" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_Garnishment4">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_GarnishmentType1</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_PartyIdentification272</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ActiveOrHistoricCurrencyAndAmount</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_Party52Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_Party52Choice">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_OrganisationIdentification39</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_PersonIdentification18</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ReferredDocumentInformation8" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_ReferredDocumentInformation8">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DocumentType1</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DateAndType1</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DocumentLineInformation2</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_StructuredRegulatoryReporting3" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_StructuredRegulatoryReporting3">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ActiveOrHistoricCurrencyAndAmount</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_CreditorReferenceType2Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_CreditorReferenceType2Choice">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DocumentAmount1" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_DocumentAmount1">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DocumentAmountType1Choice</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ActiveOrHistoricCurrencyAndAmount</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_TaxAmount3" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_TaxAmount3">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ActiveOrHistoricCurrencyAndAmount</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_TaxRecordDetails3</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_CreditorReferenceInformation3" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_CreditorReferenceInformation3">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_CreditorReferenceType3</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_SettlementDateTimeIndication1" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_SettlementDateTimeIndication1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DocumentLineType1" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_DocumentLineType1">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DocumentLineType1Choice</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_GenericFinancialIdentification1" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_GenericFinancialIdentification1">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_FinancialIdentificationSchemeName1Choice</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DateAndPlaceOfBirth1" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_DateAndPlaceOfBirth1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_GenericAccountIdentification1" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_GenericAccountIdentification1">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_AccountSchemeName1Choice</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_CashAccount40" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_CashAccount40">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_AccountIdentification4Choice</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_CashAccountType2Choice</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ProxyAccountIdentification1</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_Frequency36Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_Frequency36Choice">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_FrequencyPeriod1</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_FrequencyAndMoment1</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_SettlementInstruction15" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_SettlementInstruction15">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_CashAccount40</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ClearingSystemIdentification3Choice</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_BranchAndFinancialInstitutionIdentification8</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_GroupHeader113" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_GroupHeader113">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ActiveCurrencyAndAmount</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_SettlementInstruction15</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_PaymentTypeInformation28</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_BranchAndFinancialInstitutionIdentification8</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_FIToFICustomerCreditTransferV12" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_FIToFICustomerCreditTransferV12">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_GroupHeader113</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_CreditTransferTransaction64</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_SupplementaryData1</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_PaymentTypeInformation28" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_PaymentTypeInformation28">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ServiceLevel8Choice</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_LocalInstrument2Choice</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_CategoryPurpose1Choice</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_GenericIdentification3" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_GenericIdentification3">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_TaxAuthorisation1" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_TaxAuthorisation1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ActiveCurrencyAndAmount" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_ActiveCurrencyAndAmount">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_FinancialInstitutionIdentification23" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_FinancialInstitutionIdentification23">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ClearingSystemMemberIdentification2</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_PostalAddress27</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_GenericFinancialIdentification1</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_RemittanceInformation22" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_RemittanceInformation22">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_StructuredRemittanceInformation18</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_RegulatoryAuthority2" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_RegulatoryAuthority2">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_TaxRecordDetails3" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_TaxRecordDetails3">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_TaxPeriod3</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ActiveOrHistoricCurrencyAndAmount</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ProxyAccountType1Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_ProxyAccountType1Choice">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_PersonIdentificationSchemeName1Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_PersonIdentificationSchemeName1Choice">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_CreditTransferMandateData1" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_CreditTransferMandateData1">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_MandateTypeInformation2</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_Frequency36Choice</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_MandateSetupReason1Choice</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_PartyIdentification272" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_PartyIdentification272">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_PostalAddress27</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_Party52Choice</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_Contact13</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ChargeType3Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_ChargeType3Choice">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_GenericIdentification3</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DateAndType1" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_DateAndType1">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DateType2Choice</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_MandateTypeInformation2" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_MandateTypeInformation2">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ServiceLevel8Choice</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_LocalInstrument2Choice</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_CategoryPurpose1Choice</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_MandateClassification1Choice</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_TaxRecord3" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_TaxRecord3">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_TaxPeriod3</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_TaxAmount3</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_BranchAndFinancialInstitutionIdentification8" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_BranchAndFinancialInstitutionIdentification8">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_FinancialInstitutionIdentification23</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_BranchData5</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DateType2Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_DateType2Choice">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DocumentLineInformation2" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_DocumentLineInformation2">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DocumentLineIdentification1</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_RemittanceAmount4</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_OtherContact1" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_OtherContact1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_GenericOrganisationIdentification3" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_GenericOrganisationIdentification3">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_OrganisationIdentificationSchemeName1Choice</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DocumentLineIdentification1" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_DocumentLineIdentification1">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DocumentLineType1</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_Charges16" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_Charges16">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ActiveOrHistoricCurrencyAndAmount</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_BranchAndFinancialInstitutionIdentification8</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ChargeType3Choice</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_PaymentIdentification13" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_PaymentIdentification13">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DocumentType2Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_DocumentType2Choice">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_DocumentAmountType1Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_DocumentAmountType1Choice">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_CreditTransferTransaction64" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_CreditTransferTransaction64">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_PaymentIdentification13</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_PaymentTypeInformation28</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ActiveCurrencyAndAmount</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_SettlementDateTimeIndication1</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_SettlementTimeRequest2</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_ActiveOrHistoricCurrencyAndAmount</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_Charges16</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_CreditTransferMandateData1</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_BranchAndFinancialInstitutionIdentification8</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_CashAccount40</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_PartyIdentification272</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_InstructionForCreditorAgent3</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_InstructionForNextAgent1</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_Purpose2Choice</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_RegulatoryReporting3</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_TaxData1</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_RemittanceLocation8</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_RemittanceInformation22</dependsOn>
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_SupplementaryData1</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_FrequencyAndMoment1" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_FrequencyAndMoment1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_CategoryPurpose1Choice" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_CategoryPurpose1Choice">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_CreditorReferenceType3" displayName="SwiftConverter.docs.mx.pacs_008_001_12:docTypeRef_ns_CreditorReferenceType3">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:SwiftConverter.docs.mx.pacs_008_001_12.docTypeRef_ns_CreditorReferenceType2Choice</dependsOn>
+  </asset>
+  <asset name="SwiftConverter.interfaces.sendMT103" displayName="SwiftConverter.interfaces:sendMT103">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="SwiftConverter.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="SwiftConverter.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="SwiftConverter.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="SwiftConverter.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="SwiftConverter.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="SwiftConverter.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="SwiftConverter.config.browsemap_pkg.cnf" displayName="config/browsemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="SwiftConverter.config.readmap_pkg.cnf" displayName="config/readmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="SwiftConverter.config.writemap_pkg.cnf" displayName="config/writemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="SwiftConverter.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="SwiftConverter.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="SwiftConverter.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="SwiftConverter.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="SwiftConverter.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="SwiftConverter.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>

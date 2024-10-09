@@ -1,0 +1,348 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="Default" runtimeVersion="10.15.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="build.version" value="10.3.9" />
+  <buildInfo name="BuildVersion" value="10.3.9" />
+  <buildInfo name="BuildTimestamp" value="2024-10-09T14:10:41" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.15.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="Disallow Active Package Install">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="Package Execution Check">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types During Deployment">
+    <value>true</value>
+  </property>
+  <property name="restartRuntimes" displayName="restartRuntimes">
+    <value>false</value>
+  </property>
+  <asset name="ISPackage.Default" displayName="Default">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="acme.adapters.MQAdapterTest2" displayName="acme.adapters:MQAdapterTest2">
+    <implementation.generic type="artconnection" />
+    <property name="art.deployment.state" displayName="State After Deployment">
+      <value>disable</value>
+    </property>
+    <property name="ccdtFilePath" displayName="ccdtFilePath">
+      <value />
+    </property>
+    <property name="queueManagerName" displayName="queueManagerName">
+      <value>QM_TEST01</value>
+    </property>
+    <property name="hostName" displayName="hostName">
+      <value>35.219.125.13</value>
+    </property>
+    <property name="port" displayName="port">
+      <value>1414</value>
+    </property>
+    <property name="channel" displayName="channel">
+      <value>AppToQM1</value>
+    </property>
+    <property name="CCSID" displayName="CCSID">
+      <value>1208</value>
+    </property>
+    <property name="userId" displayName="userId">
+      <value>ibmuser</value>
+    </property>
+    <property name="password" displayName="password" isSecure="true">
+      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
+    </property>
+    <property name="queueName" displayName="queueName">
+      <value>Q1</value>
+    </property>
+    <property name="dynamicQueuePrefix" displayName="dynamicQueuePrefix">
+      <value />
+    </property>
+    <property name="encoding" displayName="encoding">
+      <value>00273-Native</value>
+    </property>
+    <property name="sendExit" displayName="sendExit">
+      <value />
+    </property>
+    <property name="sendExitInit" displayName="sendExitInit">
+      <value />
+    </property>
+    <property name="recvExit" displayName="recvExit">
+      <value />
+    </property>
+    <property name="recvExitInit" displayName="recvExitInit">
+      <value />
+    </property>
+    <property name="securityExit" displayName="securityExit">
+      <value />
+    </property>
+    <property name="securityExitInit" displayName="securityExitInit">
+      <value />
+    </property>
+    <property name="cacheOverriddenConnections" displayName="cacheOverriddenConnections">
+      <value>true</value>
+    </property>
+    <property name="actionBeforeDisconnect" displayName="actionBeforeDisconnect">
+      <value>COMMIT</value>
+    </property>
+    <property name="sslCipherSpec" displayName="sslCipherSpec">
+      <value />
+    </property>
+    <property name="sslTrustStoreAlias" displayName="sslTrustStoreAlias">
+      <value />
+    </property>
+    <property name="sslKeyStorePassword" displayName="sslKeyStorePassword">
+      <value />
+    </property>
+    <property name="sslKeyStoreAlias" displayName="sslKeyStoreAlias">
+      <value />
+    </property>
+    <property name="sslKeyStore" displayName="sslKeyStore">
+      <value />
+    </property>
+    <property name="sslOptions" displayName="sslOptions">
+      <value />
+    </property>
+    <property name=".CMGRPROP.poolable" displayName="poolable">
+      <value>true</value>
+    </property>
+    <property name=".CMGRPROP.minimumPoolSize" displayName="minimumPoolSize">
+      <value>1</value>
+    </property>
+    <property name=".CMGRPROP.maximumPoolSize" displayName="maximumPoolSize">
+      <value>10</value>
+    </property>
+    <property name=".CMGRPROP.poolIncrementSize" displayName="poolIncrementSize">
+      <value>1</value>
+    </property>
+    <property name=".CMGRPROP.blockingTimeout" displayName="blockingTimeout">
+      <value>1000</value>
+    </property>
+    <property name=".CMGRPROP.expireTimeout" displayName="expireTimeout">
+      <value>1000</value>
+    </property>
+    <property name=".CMGRPROP.startupRetryCount" displayName="startupRetryCount">
+      <value>0</value>
+    </property>
+    <property name=".CMGRPROP.startupBackoffSecs" displayName="startupBackoffSecs">
+      <value>10</value>
+    </property>
+    <property name=".CMGRPROP.heartBeatInterval" displayName="heartBeatInterval">
+      <value>0</value>
+    </property>
+  </asset>
+  <asset name="acme.adapters.MQAdapterTest" displayName="acme.adapters:MQAdapterTest">
+    <implementation.generic type="artconnection" />
+    <property name="art.deployment.state" displayName="State After Deployment">
+      <value>disable</value>
+    </property>
+    <property name="ccdtFilePath" displayName="ccdtFilePath">
+      <value />
+    </property>
+    <property name="queueManagerName" displayName="queueManagerName">
+      <value>QM_TEST01</value>
+    </property>
+    <property name="hostName" displayName="hostName">
+      <value>35.219.125.13</value>
+    </property>
+    <property name="port" displayName="port">
+      <value>1414</value>
+    </property>
+    <property name="channel" displayName="channel">
+      <value>AppToQM1</value>
+    </property>
+    <property name="CCSID" displayName="CCSID">
+      <value>1208</value>
+    </property>
+    <property name="userId" displayName="userId">
+      <value>ibmuser</value>
+    </property>
+    <property name="password" displayName="password" isSecure="true">
+      <value>{AES}aYrXC43dTWsDUHRWG5mhTA==</value>
+    </property>
+    <property name="queueName" displayName="queueName">
+      <value>Q1</value>
+    </property>
+    <property name="dynamicQueuePrefix" displayName="dynamicQueuePrefix">
+      <value />
+    </property>
+    <property name="encoding" displayName="encoding">
+      <value>00273-Native</value>
+    </property>
+    <property name="sendExit" displayName="sendExit">
+      <value />
+    </property>
+    <property name="sendExitInit" displayName="sendExitInit">
+      <value />
+    </property>
+    <property name="recvExit" displayName="recvExit">
+      <value />
+    </property>
+    <property name="recvExitInit" displayName="recvExitInit">
+      <value />
+    </property>
+    <property name="securityExit" displayName="securityExit">
+      <value />
+    </property>
+    <property name="securityExitInit" displayName="securityExitInit">
+      <value />
+    </property>
+    <property name="cacheOverriddenConnections" displayName="cacheOverriddenConnections">
+      <value>true</value>
+    </property>
+    <property name="sslTrustStoreAlias" displayName="sslTrustStoreAlias">
+      <value />
+    </property>
+    <property name="sslOptions" displayName="sslOptions">
+      <value />
+    </property>
+    <property name="sslCipherSpec" displayName="sslCipherSpec">
+      <value />
+    </property>
+    <property name="sslKeyStore" displayName="sslKeyStore">
+      <value />
+    </property>
+    <property name="sslKeyStorePassword" displayName="sslKeyStorePassword">
+      <value />
+    </property>
+    <property name="sslKeyStoreAlias" displayName="sslKeyStoreAlias">
+      <value />
+    </property>
+    <property name=".CMGRPROP.poolable" displayName="poolable">
+      <value>true</value>
+    </property>
+    <property name=".CMGRPROP.minimumPoolSize" displayName="minimumPoolSize">
+      <value>1</value>
+    </property>
+    <property name=".CMGRPROP.maximumPoolSize" displayName="maximumPoolSize">
+      <value>10</value>
+    </property>
+    <property name=".CMGRPROP.poolIncrementSize" displayName="poolIncrementSize">
+      <value>1</value>
+    </property>
+    <property name=".CMGRPROP.blockingTimeout" displayName="blockingTimeout">
+      <value>1000</value>
+    </property>
+    <property name=".CMGRPROP.expireTimeout" displayName="expireTimeout">
+      <value>1000</value>
+    </property>
+    <property name=".CMGRPROP.startupRetryCount" displayName="startupRetryCount">
+      <value>0</value>
+    </property>
+    <property name=".CMGRPROP.startupBackoffSecs" displayName="startupBackoffSecs">
+      <value>10</value>
+    </property>
+    <property name=".CMGRPROP.heartBeatInterval" displayName="heartBeatInterval">
+      <value>0</value>
+    </property>
+  </asset>
+  <asset name="acme.utils.inspectLineItems" displayName="acme.utils:inspectLineItems">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:acme.docs.orderRequest</dependsOn>
+  </asset>
+  <asset name="acme.services.test_.docTypes.test" displayName="acme.services.test_.docTypes:test">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="acme.services.test2_.docTypes.test2" displayName="acme.services.test2_.docTypes:test2">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="acme.services.riskyOperation" displayName="acme.services:riskyOperation">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="acme.services.orderRequestToCanonical" displayName="acme.services:orderRequestToCanonical">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:acme.docs.orderRequest</dependsOn>
+    <dependsOn>IS:acme.docs.orderCanonical</dependsOn>
+  </asset>
+  <asset name="acme.services.branch2" displayName="acme.services:branch2">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="acme.services.loopTest" displayName="acme.services:loopTest">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:acme.docs.department</dependsOn>
+  </asset>
+  <asset name="acme.services.sequenceTryCatch" displayName="acme.services:sequenceTryCatch">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:acme.services.riskyOperation</dependsOn>
+  </asset>
+  <asset name="acme.services.test2" displayName="acme.services:test2">
+    <implementation.generic type="isrestresource" />
+    <dependsOn>IS:acme.services.branch2</dependsOn>
+  </asset>
+  <asset name="acme.services.test" displayName="acme.services:test">
+    <implementation.generic type="isrestresource" />
+    <dependsOn>IS:acme.services.branch2</dependsOn>
+  </asset>
+  <asset name="acme.docs.schema_orderRequest" displayName="acme.docs:schema_orderRequest">
+    <implementation.generic type="isschema" />
+  </asset>
+  <asset name="acme.docs.orderRequest" displayName="acme.docs:orderRequest">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:acme.docs.docType_PartnerRoleDescription</dependsOn>
+  </asset>
+  <asset name="acme.docs.orderCanonical" displayName="acme.docs:orderCanonical">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="acme.docs.department" displayName="acme.docs:department">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="acme.docs.docType_PartnerRoleDescription" displayName="acme.docs:docType_PartnerRoleDescription">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="Default.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Default.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Default.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Default.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Default.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Default.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="Default.config.browsemap_pkg.cnf" displayName="config/browsemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="Default.config.CSRFLandingPages.cnf" displayName="config/CSRFLandingPages.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="Default.config.readmap_pkg.cnf" displayName="config/readmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="Default.config.writemap_pkg.cnf" displayName="config/writemap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="Default.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Default.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Default.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="Default.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
